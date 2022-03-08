@@ -1,6 +1,6 @@
 {
   "name": "wait-for-vercel-deployment",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Action that will wait for a specific vercel deployment to finish",
   "main": "index.js",
   "scripts": {
