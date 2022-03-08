@@ -1,13 +1,19 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Wait for Vercel deployment'
+description: 'Waits for the Vercel application to finish deployment and then outputs the application url'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  access_token:
+    description: 'Vercel authorization token'
     required: true
-    default: 'World'
+  project-id:
+    description: 'Project id of the Vercel application'
+    required: true
+  wait-for:
+    description: 'Max time to wait for response before bailing out (in seconds)'
+    default: '120'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  url:
+    description: 'The url of the deployed application'
 runs:
   using: 'node16'
   main: 'dist/index.js'
+
