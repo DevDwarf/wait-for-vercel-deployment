@@ -18,7 +18,7 @@ const axiosInstance = axios.create({
 
 const awaitVercelDeployment = async () => {
   const sha = github.context.payload.after
-  const timeout = +core.getInput("wait_for") * 1000
+  const timeout = +core.getInput("wait-for") * 1000
   const endTime = new Date().getTime() + timeout
 
   while (new Date().getTime() < endTime) {
