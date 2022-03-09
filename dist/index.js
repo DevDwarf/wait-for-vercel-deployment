@@ -11578,7 +11578,7 @@ const awaitVercelDeployment = async () => {
     try {
       const response = axiosInstance.get('/v6/deployments', {
         params: {
-          "meta-githubCommitSha": github.context.payload.head_commit.id,
+          "meta-githubCommitSha": sha,
           projectId: core.getInput('project_id', {
             required: true
           })
