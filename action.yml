@@ -1,7 +1,7 @@
 name: 'Wait for Vercel deployment'
 description: 'Waits for the Vercel application to finish deployment and then outputs the application url'
 inputs:
-  access_token:
+  access-token:
     description: 'Vercel authorization token'
     required: true
   project-id:

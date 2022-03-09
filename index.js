@@ -10,7 +10,7 @@ const wait = time =>
 const axiosInstance = axios.create({
   baseURL: "https://api.vercel.com",
   headers: {
-    Authorization: `Bearer ${core.getInput("access_token", {
+    Authorization: `Bearer ${core.getInput("access-token", {
       required: true
     })}`
   }
@@ -26,7 +26,7 @@ const awaitVercelDeployment = async () => {
       const response = axiosInstance.get('/v6/deployments', {
         params: {
           "meta-githubCommitSha": sha,
-          projectId: core.getInput('project_id', {
+          projectId: core.getInput('project-id', {
             required: true
           })
         }
